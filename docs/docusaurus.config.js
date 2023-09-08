@@ -9,7 +9,7 @@ const config = {
   title: "Snippets Vault",
   tagline:
     "Your go-to collection of code snippets in various programming languages for quick reference and learning.",
-  favicon: "img/favicon.ico",
+  favicon: "img/vault.png",
 
   // Set the production url of your site here
   url: "https://your-docusaurus-test-site.com",
@@ -19,8 +19,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "SnippetsVault", // Usually your GitHub org/user name.
+  projectName: "SnippetsVault", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -65,21 +65,20 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "SnippetsVault",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/vault.png",
         },
         items: [
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/rakarmp/SnippetsVault",
             label: "GitHub",
             position: "right",
           },
@@ -92,25 +91,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "Docs",
                 to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
               },
             ],
           },
@@ -118,17 +100,13 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/rakarmp/SnippetsVault",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/rakarmp/SnippetsVault" target="_blank">SnippetsVault</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
