@@ -1,6 +1,7 @@
-## C#
+# C#
 
-### Hello World    
+### Hello World
+
 ```csharp
 using System;
 class Program {
@@ -11,6 +12,7 @@ class Program {
 ```
 
 ### Variables
+
 ```csharp
 int age = 30;
 string name = "John";
@@ -18,12 +20,14 @@ bool isAlive = true;
 ```
 
 ### User Input
+
 ```csharp
 Console.Write("Enter something: ");
 string userInput = Console.ReadLine();
 ```
 
 ### If-else Statement
+
 ```csharp
 if (age >= 18) {
     Console.WriteLine("You are an adult.");
@@ -33,6 +37,7 @@ if (age >= 18) {
 ```
 
 ### For loop
+
 ```csharp
 for (int i = 0; i < 5; i++) {
     Console.WriteLine(i);
@@ -40,6 +45,7 @@ for (int i = 0; i < 5; i++) {
 ```
 
 ### While loop
+
 ```csharp
 int count = 0;
 while (count < 5) {
@@ -49,17 +55,20 @@ while (count < 5) {
 ```
 
 ### Arrays
+
 ```csharp
 int[] numbers = { 1, 2, 3, 4, 5 };
 string[] names = { "John", "Mary", "Bob" };
 ```
 
 ### Array access
+
 ```csharp
 int firstNumber = numbers[0];
 ```
 
 ### Functions
+
 ```csharp
 int Add(int a, int b) {
     return a + b;
@@ -67,6 +76,7 @@ int Add(int a, int b) {
 ```
 
 ### Object oriented programming
+
 ```csharp
 class Person {
     public string Name { get; set; }
@@ -78,6 +88,7 @@ class Person {
 ```
 
 ### Constructors and object initialization
+
 ```csharp
 class Person {
     public string Name { get; set; }
@@ -90,6 +101,7 @@ class Person {
 ```
 
 ### Inheritance
+
 ```csharp
 class Student : Person {
     public string School { get; set; }
@@ -97,18 +109,21 @@ class Student : Person {
 ```
 
 ### Lists (System.Collections.Generic.List)
+
 ```csharp
 using System.Collections.Generic;
 List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
 ```
 
-###  List Operations (Add, Remove)
+### List Operations (Add, Remove)
+
 ```csharp
 numbers.Add(6);
 numbers.Remove(3);
 ```
 
 ### List Iteration (foreach)
+
 ```csharp
 foreach (int num in numbers) {
     Console.WriteLine(num);
@@ -116,6 +131,7 @@ foreach (int num in numbers) {
 ```
 
 ### Dictionaries (System.Collections.Generic.Dictionary)
+
 ```csharp
 using System.Collections.Generic;
 Dictionary<string, int> scores = new Dictionary<string, int>();
@@ -123,6 +139,7 @@ scores["Alice"] = 95;
 ```
 
 ### Dictionary access and iteration
+
 ```csharp
 foreach (var pair in scores) {
     Console.WriteLine($"{pair.Key}: {pair.Value}");
@@ -130,34 +147,40 @@ foreach (var pair in scores) {
 ```
 
 ### String manipulation
+
 ```csharp
 string text = "Hello, World!";
 string upperText = text.ToUpper();
 ```
 
 ### String splitting
+
 ```csharp
 string[] words = text.Split(new char[] { ' ', ',' });
 ```
 
 ### String Joining
+
 ```csharp
 string[] words = { "Hello", "World" };
 string joinedText = string.Join(" ", words);
 ```
 
 ### DateTime (System.DateTime)
+
 ```csharp
 DateTime currentDate = DateTime.Now;
 ```
 
 ### DateTime Formatting
+
 ```csharp
 string formattedDate = currentDate.ToString("yyyy-MM-dd");
 ```
 
 ### Exception handling
-```csharp
+
+````csharp
 try {
     int result = 10 / 0;
 } catch (DivideByZeroException e) {
@@ -168,15 +191,17 @@ try {
 ```csharp
 using System.IO;
 string content = File.ReadAllText("example.txt");
-```
+````
 
 ### File Writing
+
 ```csharp
 using System.IO;
 File.WriteAllText("output.txt", "This is some text.");
 ```
 
 ### Working with Enums
+
 ```csharp
 enum DaysOfWeek {
     Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
@@ -184,11 +209,13 @@ enum DaysOfWeek {
 ```
 
 ### Enum.Parse
+
 ```csharp
 DaysOfWeek day = (DaysOfWeek)Enum.Parse(typeof(DaysOfWeek), "Wednesday");
 ```
 
 ### LINQ (Language-Integrated Query)
+
 ```csharp
 using System.Linq;
 int[] numbers = { 1, 2, 3, 4, 5 };
@@ -196,6 +223,7 @@ var evenNumbers = numbers.Where(n => n % 2 == 0);
 ```
 
 ### LINQ (Select Projection)
+
 ```csharp
 using System.Linq;
 int[] numbers = { 1, 2, 3, 4, 5 };
@@ -203,6 +231,7 @@ var squaredNumbers = numbers.Select(n => n * n);
 ```
 
 ### LINQ (Ordering)
+
 ```csharp
  using System.Linq;
 int[] numbers = { 5, 2, 9, 1, 3 };
@@ -210,6 +239,7 @@ var sortedNumbers = numbers.OrderBy(n => n);
 ```
 
 ### LINQ (Grouping)
+
 ```csharp
 using System.Linq;
 string[] fruits = { "apple", "banana", "cherry", "date", "fig" };
@@ -217,6 +247,7 @@ var groupedByLength = fruits.GroupBy(fruit => fruit.Length);
 ```
 
 ### LINQ (Joining)
+
 ```csharp
 using System.Linq;
 var users = new[] { new { ID = 1, Name = "Alice" }, new { ID = 2, Name = "Bob" } };
@@ -225,12 +256,14 @@ var joinedData = users.Join(orders, user => user.ID, order => order.UserID, (use
 ```
 
 ### Delegates and Events
+
 ```csharp
 public delegate void MyEventHandler(object sender, EventArgs e);
 public event MyEventHandler MyEvent;
 ```
 
 ### Custom delegates and event handlers
+
 ```csharp
 public delegate int CalculationDelegate(int a, int b);
 public int Add(int a, int b) {
@@ -241,6 +274,7 @@ int result = calc(5, 3);
 ```
 
 ### Asynchronous Programming (async/await)
+
 ```csharp
 using System;
 using System.Threading.Tasks;
@@ -251,6 +285,7 @@ async Task<int> LongRunningOperationAsync() {
 ```
 
 ### Async/Await Error Handling
+
 ```csharp
 try {
     int result = await LongRunningOperationAsync();
@@ -261,6 +296,7 @@ try {
 ```
 
 ### Attributes and Reflection
+
 ```csharp
 [Serializable]
 public class MyClass { }
@@ -269,6 +305,7 @@ Attribute[] attributes = Attribute.GetCustomAttributes(type);
 ```
 
 ### Working with Nullable Types
+
 ```csharp
 int? nullableInt = null;
 if (nullableInt.HasValue) {
@@ -277,6 +314,7 @@ if (nullableInt.HasValue) {
 ```
 
 ### Extension Methods
+
 ```csharp
 public static class StringExtensions {
     public static bool IsPalindrome(this string str) {
@@ -286,6 +324,7 @@ public static class StringExtensions {
 ```
 
 ### IDisposable and using
+
 ```csharp
 using (var resource = new DisposableResource()) {
     // Use the resource
@@ -293,6 +332,7 @@ using (var resource = new DisposableResource()) {
 ```
 
 ### Interoperability with Unmanaged Code (DllImport)
+
 ```csharp
 using System.Runtime.InteropServices;
 [DllImport("user32.dll")]
@@ -300,6 +340,7 @@ static extern bool SetWindowText(IntPtr hWnd, string lpString);
 ```
 
 ### Lambda Expressions with LINQ (C# 3.0+)
+
 ```csharp
 using System;
 using System.Linq;
@@ -308,6 +349,7 @@ var evenNumbers = numbers.Where(n => n % 2 == 0);
 ```
 
 ### LINQ Query Syntax (C# 3.0+)
+
 ```csharp
 using System;
 using System.Linq;
@@ -315,7 +357,8 @@ var numbers = new[] { 1, 2, 3, 4, 5 };
 var evenNumbers = from num in numbers where num % 2 == 0 select num;
 ```
 
-###  Extension Methods with LINQ (C# 3.0+)
+### Extension Methods with LINQ (C# 3.0+)
+
 ```csharp
 using System;
 using System.Linq;
@@ -333,6 +376,7 @@ int sum = numbers.CustomSum();
 ```
 
 ### Delegates and Anonymous Methods (C# 2.0+)
+
 ```csharp
 public delegate void MyDelegate(string message);
 public static void DisplayMessage(string message) {
@@ -343,6 +387,7 @@ del("Hello, delegate!");
 ```
 
 ### Events and Event Handlers (C# 2.0+)
+
 ```csharp
 public class EventPublisher {
     public event EventHandler MyEvent;
@@ -361,6 +406,7 @@ public class EventSubscriber {
 ```
 
 ### Custom Events and Event Arguments (C# 2.0+)
+
 ```csharp
 public class CustomEventArgs : EventArgs {
     public string Message { get; }
@@ -385,6 +431,7 @@ public class CustomEventSubscriber {
 ```
 
 ### Delegates and Multicast Delegates (C# 2.0+)
+
 ```csharp
 public delegate void MathOperation(int a, int b);
 public static void Add(int a, int b) {
@@ -399,6 +446,7 @@ mathDel(10, 5); // Calls both Add and Subtract
 ```
 
 ### Asynchronous Programming with async/await (C# 5.0+)
+
 ```csharp
 using System;
 using System.Threading.Tasks;
@@ -413,6 +461,7 @@ async Task Main() {
 ```
 
 ### Asynchronous Streams (C# 8.0+)
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -429,12 +478,14 @@ await foreach (var number in GenerateNumbersAsync()) {
 ```
 
 ### Value Tuples (C# 7.0+)
+
 ```csharp
 var person = ("Alice", 25);
 Console.WriteLine($"Name: {person.Item1}, Age: {person.Item2}");
 ```
 
-###  Pattern Matching (C# 7.0+)
+### Pattern Matching (C# 7.0+)
+
 ```csharp
 object data = "Hello, World!";
 if (data is string text) {
@@ -443,16 +494,19 @@ if (data is string text) {
 ```
 
 ### Discards (C# 7.0+)
+
 ```csharp
 _ = PerformOperation();
 ```
 
 ### Null Conditional Operator (C# 6.0+)
+
 ```csharp
 string name = person?.Name;
 ```
 
 ### Expression-Bodied Members (C# 6.0+)
+
 ```csharp
 public class Calculator {
     public int Add(int a, int b) => a + b;
@@ -460,11 +514,13 @@ public class Calculator {
 ```
 
 ### Tuple Deconstruction (C# 7.0+)
+
 ```csharp
 var (x, y) = GetCoordinates();
 ```
 
 ### C# Records (C# 9.0+)
+
 ```csharp
 public record Person(string Name, int Age);
 var person1 = new Person("Alice", 25);
@@ -473,6 +529,7 @@ bool areEqual = person1 == person2;
 ```
 
 ### Interpolated Strings (C# 6.0+)
+
 ```csharp
 string name = "Alice";
 int age = 25;
@@ -480,6 +537,7 @@ Console.WriteLine($"Name: {name}, Age: {age}");
 ```
 
 ### C# 8.0 Nullable Reference Types
+
 ```csharp
 #nullable enable
 string? nullableString = null;
@@ -487,12 +545,14 @@ string nonNullableString = "Hello, World!";
 ```
 
 ### Using Statements with IDisposable (C# 8.0+)
+
 ```csharp
 using var disposableResource = new DisposableResource();
 // Resource is automatically disposed when leaving this block
 ```
 
 ### Asynchronous Disposal (C# 8.0+)
+
 ```csharp
 await using var asyncDisposable = new AsyncDisposableResource();
 await asyncDisposable.DisposeAsync();

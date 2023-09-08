@@ -1,6 +1,7 @@
-## Go (Golang)
+# Go (Golang)
 
 ### Hello World
+
 ```go
 package main
 import "fmt"
@@ -10,12 +11,14 @@ func main() {
 ```
 
 ### Variables
+
 ```go
 var age int = 30
 var name string = "John"
 ```
 
 ### User input
+
 ```go
 import "fmt"
 func main() {
@@ -27,6 +30,7 @@ func main() {
 ```
 
 ### If-else
+
 ```go
 if age >= 18 {
     fmt.Println("You are an adult.")
@@ -36,6 +40,7 @@ if age >= 18 {
 ```
 
 ### For loop
+
 ```go
 for i := 0; i < 5; i++ {
     fmt.Println(i)
@@ -43,6 +48,7 @@ for i := 0; i < 5; i++ {
 ```
 
 ### While loop
+
 ```go
 count := 0
 for count < 5 {
@@ -52,16 +58,19 @@ for count < 5 {
 ```
 
 ### Arrays
+
 ```go
 numbers := [5]int{1, 2, 3, 4, 5}
 ```
 
 ### Array access
+
 ```go
 firstNumber := numbers[0]
 ```
 
 ### Functions
+
 ```go
 func add(a, b int) int {
     return a + b
@@ -69,6 +78,7 @@ func add(a, b int) int {
 ```
 
 ### Structs (Custom data types)
+
 ```go
 type Person struct {
     Name string
@@ -77,22 +87,26 @@ type Person struct {
 ```
 
 ### Struct initialization
+
 ```go
 person := Person{Name: "Alice", Age: 25}
 ```
 
 ### Slices(Dynamic arrays)
+
 ```go
 numbers := []int{1, 2, 3, 4, 5}
 ```
 
 ### Slice operations (Append, Remove)
+
 ```go
 numbers = append(numbers, 6)
 numbers = append(numbers[:2], numbers[3:]...)
 ```
 
 ### Slice iteration (range)
+
 ```go
 for index, value := range numbers {
     fmt.Printf("Index: %d, Value: %d\n", index, value)
@@ -100,17 +114,20 @@ for index, value := range numbers {
 ```
 
 ### Maps (key-value pairs)
+
 ```go
 scores := map[string]int{"Alice": 95, "Bob": 88}
 ```
 
 ### Map operations (Insert, Delete)
+
 ```go
 scores["Charlie"] = 72
 delete(scores, "Bob")
 ```
 
 ### Map iteration
+
 ```go
 for name, score := range scores {
     fmt.Printf("Name: %s, Score: %d\n", name, score)
@@ -118,12 +135,14 @@ for name, score := range scores {
 ```
 
 ### String manipulation
+
 ```go
 text := "Hello, World!"
 substring := text[0:5]
 ```
 
 ### String concatenation
+
 ```go
 greeting := "Hello"
 name := "Alice"
@@ -131,6 +150,7 @@ message := greeting + ", " + name + "!"
 ```
 
 ### Time formatting
+
 ```go
 import "time"
 currentTime := time.Now()
@@ -138,6 +158,7 @@ formattedTime := currentTime.Format("2006-01-02 15:04:05")
 ```
 
 ### Error handling (panic and recover)
+
 ```go
 func example() {
     defer func() {
@@ -150,6 +171,7 @@ func example() {
 ```
 
 ### File Reading (io/ioutil)
+
 ```go
 import "io/ioutil"
 content, err := ioutil.ReadFile("example.txt")
@@ -159,6 +181,7 @@ if err != nil {
 ```
 
 ### File Writing (os)
+
 ```go
 import "os"
 file, err := os.Create("output.txt")
@@ -170,6 +193,7 @@ file.WriteString("This is some text.")
 ```
 
 ### Working with enums
+
 ```go
 const (
     Monday = iota
@@ -182,7 +206,8 @@ const (
 )
 ```
 
-### Regular expressions (regexp)    
+### Regular expressions (regexp)
+
 ```go
 import "regexp"
 text := "My email is example@example.com."
@@ -191,6 +216,7 @@ isEmail, _ := regexp.MatchString(pattern, text)
 ```
 
 ### Working with Interfaces
+
 ```go
 type Shape interface {
     Area() float64
@@ -198,6 +224,7 @@ type Shape interface {
 ```
 
 ### Goroutines (Concurrent Execution)
+
 ```go
 import "fmt"
 import "time"
@@ -210,6 +237,7 @@ func main() {
 ```
 
 ### Channels (Communication Between Goroutines)
+
 ```go
 ch := make(chan int)
 go func() {
@@ -219,6 +247,7 @@ value := <-ch
 ```
 
 ### Wait Groups (Synchronization)
+
 ```go
 import "sync"
 var wg sync.WaitGroup
@@ -235,6 +264,7 @@ wg.Wait()
 ```
 
 ### Error handling (Custom errors)
+
 ```go
 type CustomError struct {
     Message string
@@ -245,6 +275,7 @@ func (e *CustomError) Error() string {
 ```
 
 ### JSON Serialization and Deserialization
+
 ```go
 import "encoding/json"
 data := struct {
@@ -255,6 +286,7 @@ jsonString, _ := json.Marshal(data)
 ```
 
 ### Working with Timezones (time.LoadLocation)
+
 ```go
 import "time"
 location, _ := time.LoadLocation("America/New_York")
@@ -262,6 +294,7 @@ current_time := time.Now().In(location)
 ```
 
 ### Command-Line Arguments (os.Args)
+
 ```go
 import "os"
 if len(os.Args) > 1 {
@@ -271,6 +304,7 @@ if len(os.Args) > 1 {
 ```
 
 ### Reflection (reflect package)
+
 ```go
 import "reflect"
 value := 42
@@ -278,6 +312,7 @@ valueType := reflect.TypeOf(value)
 ```
 
 ### Function variadic parameters
+
 ```go
 func sum(numbers ...int) int {
     total := 0
@@ -289,6 +324,7 @@ func sum(numbers ...int) int {
 ```
 
 ### Working with time durations
+
 ```go
 import "time"
 duration := 5 * time.Second
@@ -296,6 +332,7 @@ time.Sleep(duration)
 ```
 
 ### Defer Statement
+
 ```go
 func main() {
     defer fmt.Println("Deferred statement")
@@ -304,6 +341,7 @@ func main() {
 ```
 
 ### Custom String Formatting
+
 ```go
 type Person struct {
     Name string
@@ -315,6 +353,7 @@ func (p Person) String() string {
 ```
 
 ### Multiple Return Values
+
 ```go
 func divide(a, b int) (int, error) {
     if b == 0 {
@@ -325,6 +364,7 @@ func divide(a, b int) (int, error) {
 ```
 
 ### Reading from Standard Input (fmt.Scan)
+
 ```go
 import "fmt"
 var input string
@@ -334,6 +374,7 @@ fmt.Println("You entered:", input)
 ```
 
 ### Anonymous Functions (Closures)
+
 ```go
 func main() {
     x := 10
@@ -344,6 +385,7 @@ func main() {
 ```
 
 ### Goroutines and Channels (Fan-out, Fan-in)
+
 ```go
 func worker(id int, jobs <-chan int, results chan<- int) {
     for j := range jobs {
@@ -354,18 +396,18 @@ func worker(id int, jobs <-chan int, results chan<- int) {
 func main() {
     jobs := make(chan int, 100)
     results := make(chan int, 100)
-    
+
     // Start workers
     for w := 1; w <= 3; w++ {
         go worker(w, jobs, results)
     }
-    
+
     // Send jobs
     for j := 1; j <= 9; j++ {
         jobs <- j
     }
     close(jobs)
-    
+
     // Collect results
     for a := 1; a <= 9; a++ {
         <-results
@@ -374,6 +416,7 @@ func main() {
 ```
 
 ### Mutexes and Synchronization (Mutex)
+
 ```go
 import "sync"
 
@@ -401,6 +444,7 @@ func main() {
 ```
 
 ### Defer Statement and Recovery (Panic and Recover)
+
 ```go
 func recoverDemo() {
     defer func() {
@@ -408,7 +452,7 @@ func recoverDemo() {
             fmt.Println("Recovered:", r)
         }
     }()
-    
+
     panic("Panic!")
 }
 
@@ -419,6 +463,7 @@ func main() {
 ```
 
 ### Reflection (reflect package)
+
 ```go
 import (
     "fmt"
@@ -434,7 +479,7 @@ func main() {
     p := Person{"Alice", 30}
     valueType := reflect.TypeOf(p)
     fmt.Println("Type:", valueType)
-    
+
     value := reflect.ValueOf(p)
     fmt.Println("Fields:")
     for i := 0; i < value.NumField(); i++ {
@@ -445,6 +490,7 @@ func main() {
 ```
 
 ### Function Closure
+
 ```go
 func generateAdder(a int) func(int) int {
     return func(b int) int {
@@ -460,6 +506,7 @@ func main() {
 ```
 
 ### Custom errors
+
 ```go
 type MyError struct {
     Message string
@@ -481,6 +528,7 @@ func main() {
 ```
 
 ### Context Package (Cancellation and Timeout)
+
 ```go
 import (
     "context"
@@ -505,6 +553,7 @@ func main() {
 ```
 
 ### Working with JSON (Unmarshalling into Structs)
+
 ```go
 import (
     "encoding/json"
@@ -528,6 +577,7 @@ func main() {
 ```
 
 ### Working with Time (time package)
+
 ```go
 import (
     "fmt"
@@ -537,13 +587,14 @@ import (
 func main() {
     currentTime := time.Now()
     fmt.Println("Current Time:", currentTime)
-    
+
     tomorrow := currentTime.Add(24 * time.Hour)
     fmt.Println("Tomorrow:", tomorrow)
 }
 ```
 
 ### HTTP Server and Client (net/http package)
+
 ```go
 import (
     "fmt"
@@ -561,6 +612,7 @@ func main() {
 ```
 
 ### Creating and using interfaces
+
 ```go
 type Shape interface {
     Area() float64
@@ -585,7 +637,7 @@ func (s Square) Area() float64 {
 func main() {
     c := Circle{Radius: 5}
     s := Square{SideLength: 4}
-    
+
     shapes := []Shape{c, s}
     for _, shape := range shapes {
         fmt.Printf("Area: %f\n", shape.Area())
@@ -594,6 +646,7 @@ func main() {
 ```
 
 ### Function variadic parameters
+
 ```go
 func sum(numbers ...int) int {
     total := 0
@@ -610,6 +663,7 @@ func main() {
 ```
 
 ### Working with Templates (html/template package)
+
 ```go
 import (
     "html/template"
@@ -629,6 +683,7 @@ func main() {
 ```
 
 ### Web Routing with Gorilla Mux (gorilla/mux package)
+
 ```go
 import (
     "fmt"
@@ -643,13 +698,14 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
     r := mux.NewRouter()
     r.HandleFunc("/hello", helloHandler)
-    
+
     http.Handle("/", r)
     http.ListenAndServe(":8080", nil)
 }
 ```
 
 ### Custom Middleware in HTTP Handlers
+
 ```go
 import (
     "fmt"
@@ -670,13 +726,14 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
     r := http.NewServeMux()
     r.HandleFunc("/hello", helloHandler)
-    
+
     http.Handle("/", loggingMiddleware(r))
     http.ListenAndServe(":8080", nil)
 }
 ```
 
 ### Database Access with SQL (database/sql package)
+
 ```go
 import (
     "database/sql"
@@ -691,14 +748,14 @@ func main() {
         return
     }
     defer db.Close()
-    
+
     rows, err := db.Query("SELECT name FROM users WHERE age > ?", 25)
     if err != nil {
         fmt.Println("Error:", err)
         return
     }
     defer rows.Close()
-    
+
     for rows.Next() {
         var name string
         err := rows.Scan(&name)
@@ -712,6 +769,7 @@ func main() {
 ```
 
 ### Concurrent Map Access (sync.Map)
+
 ```go
 import (
     "fmt"
@@ -720,20 +778,21 @@ import (
 
 func main() {
     var m sync.Map
-    
+
     m.Store("key1", "value1")
     m.Store("key2", "value2")
-    
+
     value, ok := m.Load("key1")
     if ok {
         fmt.Println("Value:", value)
     }
-    
+
     m.Delete("key2")
 }
 ```
 
 ### Panic and Recover in Goroutines
+
 ```go
 import (
     "fmt"
@@ -746,7 +805,7 @@ func recoverInGoroutine() {
             fmt.Println("Recovered in goroutine:", r)
         }
     }()
-    
+
     panic("Goroutine panic")
 }
 
@@ -757,6 +816,7 @@ func main() {
 ```
 
 ### Custom Sort Function (sort package)
+
 ```go
 import (
     "fmt"
@@ -780,9 +840,9 @@ func main() {
         {"Bob", 25},
         {"Charlie", 35},
     }
-    
+
     sort.Sort(ByAge(people))
-    
+
     for _, p := range people {
         fmt.Printf("Name: %s, Age: %d\n", p.Name, p.Age)
     }

@@ -1,6 +1,7 @@
-## CSS
+# CSS
 
 ### Center an element horizontally and vertically
+
 ```css
 .center-element {
   position: absolute;
@@ -11,6 +12,7 @@
 ```
 
 ### Center an element vertically
+
 ```css
 .center-vertically {
   position: absolute;
@@ -20,14 +22,15 @@
 ```
 
 ### Center an element horizontally
+
 ```css
 .center-horizontally {
   margin: 0 auto;
 }
 ```
 
-
 ### Create a responsive flexbox container
+
 ```css
 .container {
   display: flex;
@@ -37,6 +40,7 @@
 ```
 
 ### Style buttons
+
 ```css
 .button {
   padding: 10px 20px;
@@ -52,6 +56,7 @@
 ```
 
 ### Create a gradient background
+
 ```css
 .gradient-bg {
   background: linear-gradient(to bottom, #ff9900, #ff5500);
@@ -59,6 +64,7 @@
 ```
 
 ### Add box shadow
+
 ```css
 .box-shadow {
   box-shadow: 3px 3px 5px #888888;
@@ -66,6 +72,7 @@
 ```
 
 ### Style links
+
 ```css
 a {
   text-decoration: none;
@@ -77,6 +84,7 @@ a:hover {
 ```
 
 ### Create a sticky header
+
 ```css
 .sticky-header {
   position: sticky;
@@ -87,6 +95,7 @@ a:hover {
 ```
 
 ### Create a responsive grid layout
+
 ```css
 .grid-layout {
   display: grid;
@@ -96,6 +105,7 @@ a:hover {
 ```
 
 ### Style a dropdown menu
+
 ```css
 .dropdown-menu {
   display: none;
@@ -106,6 +116,7 @@ a:hover {
 ```
 
 ### Animate an element on hover
+
 ```css
 .animate-on-hover {
   transition: transform 0.3s ease;
@@ -116,6 +127,7 @@ a:hover {
 ```
 
 ### Create a bordered box
+
 ```css
 .bordered-box {
   border: 1px solid #ccc;
@@ -124,6 +136,7 @@ a:hover {
 ```
 
 ### Style a navigation bar
+
 ```css
 .navbar {
   background-color: #333;
@@ -133,6 +146,7 @@ a:hover {
 ```
 
 ### Create a responsive image
+
 ```css
 .responsive-image {
   max-width: 100%;
@@ -141,6 +155,7 @@ a:hover {
 ```
 
 ### Style a form input
+
 ```css
 .input-field {
   border: 1px solid #ccc;
@@ -150,6 +165,7 @@ a:hover {
 ```
 
 ### Style a progress bar
+
 ```css
 .progress-bar {
   width: 100%;
@@ -163,6 +179,7 @@ a:hover {
 ```
 
 ### Create a pulse animation
+
 ```css
 .pulse-animation {
   animation: pulse 1s infinite;
@@ -181,6 +198,7 @@ a:hover {
 ```
 
 ### Style a tooltip
+
 ```css
 .tooltip {
   position: relative;
@@ -203,6 +221,7 @@ a:hover {
 ```
 
 ### Create a rotating spinner
+
 ```css
 .spinner {
   animation: spin 1s infinite linear;
@@ -218,18 +237,21 @@ a:hover {
 ```
 
 ### Style a table
+
 ```css
 .table {
   width: 100%;
   border-collapse: collapse;
 }
-.table th, .table td {
+.table th,
+.table td {
   border: 1px solid #ccc;
   padding: 10px;
 }
 ```
 
-### Create a 3D button effect 
+### Create a 3D button effect
+
 ```css
 .button-3d {
   position: relative;
@@ -250,6 +272,7 @@ a:hover {
 ```
 
 ### Style a horizontal rule
+
 ```css
 .horizontal-rule {
   border: none;
@@ -259,6 +282,7 @@ a:hover {
 ```
 
 ### Create a zoom-in animation
+
 ```css
 .zoom-in-animation {
   animation: zoomIn 0.5s;
@@ -274,6 +298,7 @@ a:hover {
 ```
 
 ### Style a list with bullets
+
 ```css
 .bullet-list {
   list-style: disc;
@@ -282,6 +307,7 @@ a:hover {
 ```
 
 ### Create a slide-in menu
+
 ```css
 .slide-in-menu {
   transform: translateX(-100%);
@@ -293,6 +319,7 @@ a:hover {
 ```
 
 ### Style a blockquote
+
 ```css
 .blockquote {
   border-left: 2px solid #007bff;
@@ -303,6 +330,7 @@ a:hover {
 ```
 
 ### Create a responsive card layout
+
 ```css
 .card {
   width: 100%;
@@ -315,6 +343,7 @@ a:hover {
 ```
 
 ### Style a footer
+
 ```css
 .footer {
   background-color: #333;
@@ -325,6 +354,7 @@ a:hover {
 ```
 
 ### Create a slide-down animation
+
 ```css
 .slide-down-animation {
   animation: slideDown 0.5s;
@@ -340,6 +370,7 @@ a:hover {
 ```
 
 ### Style a horizontal navigation menu
+
 ```css
 .horizontal-menu {
   list-style: none;
@@ -352,6 +383,7 @@ a:hover {
 ```
 
 ### Create a diagonal background pattern
+
 ```css
 .diagonal-pattern {
   background-image: linear-gradient(to bottom right, #007bff 50%, #fff 50%);
@@ -360,6 +392,7 @@ a:hover {
 ```
 
 ### Style a notification badge
+
 ```css
 .notification-badge {
   background-color: #ff5500;
@@ -368,10 +401,3 @@ a:hover {
   border-radius: 50%;
 }
 ```
-
-
-
-
-
-
-

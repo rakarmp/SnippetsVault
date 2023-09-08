@@ -1,6 +1,7 @@
-## Scala
+# Scala
 
 ### Hello World
+
 ```scala
 object HelloWorld extends App {
   println("Hello, World!")
@@ -8,12 +9,14 @@ object HelloWorld extends App {
 ```
 
 ### Variable declaration
+
 ```scala
 val pi = 3.14159
 var count = 0
 ```
 
 ### Basic data types
+
 ```scala
 val num: Int = 42
 val name: String = "John"
@@ -21,12 +24,14 @@ val isTrue: Boolean = true
 ```
 
 ### String interpolation
+
 ```scala
 val name = "Alice"
 println(s"Hello, $name!")
 ```
 
 ### Conditional statements
+
 ```scala
 val age = 18
 if (age >= 18) {
@@ -37,6 +42,7 @@ if (age >= 18) {
 ```
 
 ### Pattern Matching (Similar to Switch)
+
 ```scala
 val day = 2
 day match {
@@ -47,6 +53,7 @@ day match {
 ```
 
 ### For loop
+
 ```scala
 for (i <- 1 to 5) {
   println(i)
@@ -54,6 +61,7 @@ for (i <- 1 to 5) {
 ```
 
 ### While loop
+
 ```scala
 var i = 0
 while (i < 5) {
@@ -63,6 +71,7 @@ while (i < 5) {
 ```
 
 ### Function declaration
+
 ```scala
 def add(a: Int, b: Int): Int = {
   a + b
@@ -70,42 +79,49 @@ def add(a: Int, b: Int): Int = {
 ```
 
 ### Anonymous function
+
 ```scala
 val multiply = (a: Int, b: Int) => a * b
 val result = multiply(5, 3)
 ```
 
 ### lists
+
 ```scala
 val fruits = List("apple", "banana", "cherry")
 val firstFruit = fruits.head
 ```
 
 ### Maps
+
 ```scala
 val scores = Map("Alice" -> 95, "Bob" -> 85, "Carol" -> 90)
 val aliceScore = scores("Alice")
 ```
 
 ### Option for handling nulls
+
 ```scala
 val maybeName: Option[String] = Some("Alice")
 val length = maybeName.getOrElse("").length
 ```
 
 ### Class declaration
+
 ```scala
 class Person(val name: String, var age: Int)
 val person = new Person("John", 30)
 ```
 
 ### Inheritance
+
 ```scala
 class Animal(val name: String)
 class Dog(name: String, val breed: String) extends Animal(name)
 ```
 
 ### Trait (Similar to Interface)
+
 ```scala
 trait Shape {
   def area(): Double
@@ -113,6 +129,7 @@ trait Shape {
 ```
 
 ### Enumerations
+
 ```scala
  object Color extends Enumeration {
   val RED, GREEN, BLUE = Value
@@ -121,6 +138,7 @@ val selectedColor = Color.RED
 ```
 
 ### Try-catch
+
 ```scala
 try {
   // Code that may throw an exception
@@ -130,6 +148,7 @@ try {
 ```
 
 ### File IO
+
 ```scala
 val text = scala.io.Source.fromFile("data.txt").mkString
 import java.io._
@@ -139,6 +158,7 @@ writer.close()
 ```
 
 ### Case classes (Immutable data structures)
+
 ```scala
 case class Point(x: Int, y: Int)
 val point1 = Point(1, 2)
@@ -147,6 +167,7 @@ val areEqual = point1 == point2 // true
 ```
 
 ### Option and match for safe value retrieval
+
 ```scala
 val maybeValue: Option[Int] = Some(42)
 val result = maybeValue match {
@@ -156,24 +177,28 @@ val result = maybeValue match {
 ```
 
 ### Filter List
+
 ```scala
 val numbers = List(1, 2, 3, 4, 5)
 val evenNumbers = numbers.filter(_ % 2 == 0)
 ```
 
 ### Map List
+
 ```scala
 val numbers = List(1, 2, 3, 4, 5)
 val squaredNumbers = numbers.map(x => x * x)
 ```
 
 ### Sort List
+
 ```scala
 val names = List("Alice", "Bob", "Carol")
 val sortedNames = names.sorted
 ```
 
 ### String operations
+
 ```scala
 val text = "Scala is awesome"
 val upperCaseText = text.toUpperCase
@@ -181,24 +206,28 @@ val words = text.split(" ")
 ```
 
 ### Regular expressions
+
 ```scala
 val regex = """\d+""".r
 val matchResult = regex.findFirstIn("Age: 30")
 ```
 
 ### Date and Time (using java.time)
+
 ```scala
 import java.time._
 val currentDate = LocalDate.now
 ```
 
 ### Random numbers
+
 ```scala
 import scala.util.Random
 val random = Random.nextInt(10)
 ```
 
 ### Multiline strings
+
 ```scala
 val multilineText =
   """
@@ -208,6 +237,7 @@ val multilineText =
 ```
 
 ### Break and Continue (Not Natively Supported)
+
 ```scala
 // Use custom breakable and continue constructs
 import util.control.Breaks._
@@ -221,29 +251,34 @@ breakable {
 ```
 
 ### Collections operations (e.g., sum)
+
 ```scala
 val numbers = List(1, 2, 3, 4, 5)
 val sum = numbers.sum
 ```
 
 ### read from console
+
 ```scala
 val input = scala.io.StdIn.readLine()
 ```
 
 ### Type casting (AsInstanceOf)
+
 ```scala
 val anyValue: Any = 42
 val intValue = anyValue.asInstanceOf[Int]
 ```
 
 ### Elivs operator (not natively supported)
+
 ```scala
 // Use Option to emulate Elvis operator
 val result = Option(maybeValue).getOrElse(0)
 ```
 
 ### Custom control structures
+
 ```scala
 def customLoop(n: Int)(body: => Unit): Unit = {
   var i = 0
@@ -259,6 +294,7 @@ customLoop(5) {
 ```
 
 ### Exception handling with resources (Try-With-Resources)
+
 ```scala
 import scala.util.Using
 import java.io._
@@ -269,6 +305,7 @@ Using(new PrintWriter(new File("output.txt"))) { writer =>
 ```
 
 ### Futures and async programming
+
 ```scala
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -285,6 +322,7 @@ futureResult.onComplete {
 ```
 
 ### Pattern matching with case classes
+
 ```scala
 case class Message(sender: String, content: String)
 val message = Message("Alice", "Hello, Bob!")
@@ -295,6 +333,7 @@ message match {
 ```
 
 ### Type parameters and generics
+
 ```scala
 class Box[T](value: T) {
   def getValue: T = value
@@ -305,13 +344,8 @@ val stringValue = intBox.getValue.toString
 ```
 
 ### Implicits (Advanced Feature for Implicit Conversions)
+
 ```scala
 implicit def intToString(i: Int): String = i.toString
 val str: String = 42 // Converts int to string implicitly
 ```
-
-
-
-
-
-

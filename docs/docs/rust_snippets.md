@@ -1,6 +1,7 @@
-## Rust
+# Rust
 
 ### Hello World
+
 ```rust
 fn main() {
     println!("Hello, World!");
@@ -8,12 +9,14 @@ fn main() {
 ```
 
 ### Variables and constants
+
 ```rust
 let variable = 10;
 const CONSTANT_VALUE: i32 = 5;
 ```
 
 ### Data types
+
 ```rust
 let integer: i32 = 42;
 let float: f64 = 3.14;
@@ -22,17 +25,20 @@ let boolean: bool = true;
 ```
 
 ### Arrays
+
 ```rust
 let fruits = ["Apple", "Banana", "Orange"];
 ```
 
 ### Vectors
+
 ```rust
 let mut numbers = vec![1, 2, 3];
 numbers.push(4);
 ```
 
 ### Conditional statements
+
 ```rust
 if age >= 18 {
     println!("You are an adult.");
@@ -42,6 +48,7 @@ if age >= 18 {
 ```
 
 ### For loop
+
 ```rust
 for number in 1..=5 {
     println!("{}", number);
@@ -49,6 +56,7 @@ for number in 1..=5 {
 ```
 
 ### While loop
+
 ```rust
 let mut count = 0;
 while count < 5 {
@@ -58,6 +66,7 @@ while count < 5 {
 ```
 
 ### Functions
+
 ```rust
 fn greet(name: &str) {
     println!("Hello, {}!", name);
@@ -65,12 +74,14 @@ fn greet(name: &str) {
 ```
 
 ### Option and result
+
 ```rust
 let maybe_value: Option<i32> = Some(42);
 let result: Result<i32, String> = Ok(42);
 ```
 
 ### Pattern matching
+
 ```rust
 match age {
     0 => println!("You're a baby"),
@@ -81,6 +92,7 @@ match age {
 ```
 
 ### Enumerations
+
 ```rust
 enum Color {
     Red,
@@ -91,6 +103,7 @@ let my_color = Color::Green;
 ```
 
 ### Structs
+
 ```rust
 struct Point {
     x: f64,
@@ -100,12 +113,14 @@ let origin = Point { x: 0.0, y: 0.0 };
 ```
 
 ### Ownership and borrowing
+
 ```rust
 let s1 = String::from("Hello");
 let s2 = s1.clone();
 ```
 
 ### References and lifetimes
+
 ```rust
 fn longest<'a>(s1: &'a str, s2: &'a str) -> &'a str {
     if s1.len() > s2.len() {
@@ -117,6 +132,7 @@ fn longest<'a>(s1: &'a str, s2: &'a str) -> &'a str {
 ```
 
 ### Methods on structs
+
 ```rust
 impl Point {
     fn distance(&self, other: &Point) -> f64 {
@@ -126,6 +142,7 @@ impl Point {
 ```
 
 ### Traits and implementations
+
 ```rust
 trait Shape {
     fn area(&self) -> f64;
@@ -143,6 +160,7 @@ impl Shape for Circle {
 ```
 
 ### Error handling with `Result`
+
 ```rust
 fn divide(a: i32, b: i32) -> Result<f64, String> {
     if b == 0 {
@@ -153,11 +171,13 @@ fn divide(a: i32, b: i32) -> Result<f64, String> {
 ```
 
 ### Option and `unwrap`
+
 ```rust
 let result = some_option.unwrap_or_default();
 ```
 
 ### Closures
+
 ```rust
 let add_numbers = |a: i32, b: i32| -> i32 {
     a + b
@@ -166,6 +186,7 @@ let sum = add_numbers(5, 3);
 ```
 
 ### Pattern matching with Enums
+
 ```rust
 enum Coin {
     Penny,
@@ -185,6 +206,7 @@ fn value_in_cents(coin: Coin) -> i32 {
 ```
 
 ### File I/O
+
 ```rust
 use std::fs::File;
 use std::io::prelude::*;
@@ -197,6 +219,7 @@ fn main() -> std::io::Result<()> {
 ```
 
 ### Command line arguments
+
 ```rust
 use std::env;
 
@@ -207,6 +230,7 @@ fn main() {
 ```
 
 ### Concurrency with Threads
+
 ```rust
 use std::thread;
 
@@ -220,6 +244,7 @@ fn main() {
 ```
 
 ### Mutexes and shared data
+
 ```rust
 use std::sync::{Arc, Mutex};
 
@@ -246,6 +271,7 @@ fn main() {
 ```
 
 ### Error handling with ? operator
+
 ```rust
 use std::fs::File;
 use std::io::{self, Read};
@@ -259,6 +285,7 @@ fn read_file() -> Result<String, io::Error> {
 ```
 
 ### Traits and generic functions
+
 ```rust
 trait Printable {
     fn print(&self);
@@ -272,6 +299,7 @@ fn print_all<T: Printable>(items: Vec<T>) {
 ```
 
 ### Lifetimes in function signatures
+
 ```rust
 fn longest<'a>(s1: &'a str, s2: &'a str) -> &'a str {
     if s1.len() > s2.len() {
@@ -283,6 +311,7 @@ fn longest<'a>(s1: &'a str, s2: &'a str) -> &'a str {
 ```
 
 ### Unsafe code
+
 ```rust
 unsafe fn dangerous() {
     // Unsafe code here
@@ -290,6 +319,7 @@ unsafe fn dangerous() {
 ```
 
 ### Match expressions for exhaustive patterns
+
 ```rust
 fn main() {
     let number = Some(7);
@@ -303,6 +333,7 @@ fn main() {
 ```
 
 ### Async/Await (Requires the async-std or tokio library)
+
 ```rust
 use async_std::task;
 
@@ -316,6 +347,7 @@ fn main() {
 ```
 
 ### Handling JSON with serde
+
 ```rust
 use serde::{Deserialize, Serialize};
 
@@ -333,6 +365,7 @@ let json = serde_json::to_string(&person).unwrap();
 ```
 
 ### File downloads (with rocket web framework)
+
 ```rust
 use rocket::tokio::fs::NamedFile;
 
@@ -343,6 +376,7 @@ async fn download() -> Option<NamedFile> {
 ```
 
 ### Web API (with Actix web framework)
+
 ```rust
 use actix_web::{web, App, HttpServer, HttpResponse, Result};
 
@@ -363,6 +397,7 @@ async fn main() -> std::io::Result<()> {
 ```
 
 ### Working with Database (with Diesel ORM)
+
 ```rust
 use diesel::prelude::*;
 
@@ -385,6 +420,7 @@ fn main() {
 ```
 
 ### Unsafe Rust
+
 ```rust
 unsafe fn dangerous_function() {
     // Unsafe code here
@@ -398,6 +434,7 @@ fn main() {
 ```
 
 ### FFI (Foreign Function Interface)
+
 ```rust
 extern "C" {
     fn some_external_function();
@@ -411,6 +448,7 @@ fn main() {
 ```
 
 ### Writing unit tests
+
 ```rust
 #[cfg(test)]
 mod tests {
@@ -422,6 +460,7 @@ mod tests {
 ```
 
 ### Lifetime annotations
+
 ```rust
 fn longest<'a>(s1: &'a str, s2: &'a str) -> &'a str {
     if s1.len() > s2.len() {
@@ -433,6 +472,7 @@ fn longest<'a>(s1: &'a str, s2: &'a str) -> &'a str {
 ```
 
 ### Advanced Pattern Matching
+
 ```rust
 match result {
     Ok(value) => println!("Value is {}", value),
@@ -441,6 +481,7 @@ match result {
 ```
 
 ### Option and result unwrapper
+
 ```rust
 let result = calculate_result();
 let value = result.unwrap_or_else(|error| {
@@ -450,6 +491,7 @@ let value = result.unwrap_or_else(|error| {
 ```
 
 ### Concurrency with async-std
+
 ```rust
 use async_std::task;
 
@@ -463,6 +505,7 @@ fn main() {
 ```
 
 ### Channels for concurrency
+
 ```rust
 use std::sync::mpsc;
 use std::thread;
@@ -475,9 +518,3 @@ thread::spawn(move || {
 
 let received = receiver.recv().unwrap();
 ```
-
-
-
-
-
-

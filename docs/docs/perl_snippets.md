@@ -1,16 +1,19 @@
-## Perl 
+# Perl
 
 ### Hello World
+
 ```perl
 print "Hello, World!\n";
 ```
 
 ### Variables
+
 ```perl
 my $variable = "Value";
 ```
 
 ### User Input
+
 ```perl
 print "Enter something: ";
 my $input = <STDIN>;
@@ -18,11 +21,13 @@ chomp($input); # Remove newline
 ```
 
 ### Comments
+
 ```perl
 # This is a comment
 ```
 
 ### If-Else
+
 ```perl
 if ($condition) {
     # Code to execute if condition is true
@@ -32,6 +37,7 @@ if ($condition) {
 ```
 
 ### For Loop
+
 ```perl
 for my $i (1..10) {
     # Code to repeat 10 times
@@ -39,6 +45,7 @@ for my $i (1..10) {
 ```
 
 ### While Loop
+
 ```perl
 while ($condition) {
     # Code to execute while condition is true
@@ -46,16 +53,19 @@ while ($condition) {
 ```
 
 ### Arrays
+
 ```perl
 my @array = (1, 2, 3);
 ```
 
 ### Hashes
+
 ```perl
 my %hash = ('key1' => 'value1', 'key2' => 'value2');
 ```
 
 ### Subroutines
+
 ```perl
 sub my_function {
     my ($arg1, $arg2) = @_;
@@ -64,6 +74,7 @@ sub my_function {
 ```
 
 ### File Input/Output
+
 ```perl
 open my $file, '<', 'filename.txt' or die "Couldn't open file: $!";
 while (my $line = <$file>) {
@@ -74,6 +85,7 @@ close $file;
 ```
 
 ### Regular Expressions
+
 ```perl
 if ($string =~ /pattern/) {
     # Match found
@@ -81,43 +93,51 @@ if ($string =~ /pattern/) {
 ```
 
 ### Splitting Strings
+
 ```perl
 my @words = split(' ', $string);
 ```
 
 ### Joining Strings
+
 ```perl
 my $new_string = join(', ', @array);
 ```
 
 ### Reading Command Line Arguments
+
 ```perl
 my $arg1 = $ARGV[0];
 ```
 
 ### Getting the current date and time
+
 ```perl
 use POSIX qw(strftime);
 my $timestamp = strftime("%Y-%m-%d %H:%M:%S", localtime);
 ```
 
 ### Mathemathical Operations
+
 ```perl
 my $result = $num1 + $num2;
 ```
 
 ### Sorting Arrays
+
 ```perl
 my @sorted_array = sort @array;
 ```
 
 ### Removing Duplicates from Arrays
+
 ```perl
 my %seen;
 my @unique_array = grep { !$seen{$_}++ } @array;
 ```
 
 ### Checking if a file exists
+
 ```perl
 if (-e 'filename.txt') {
     # File exists
@@ -125,31 +145,37 @@ if (-e 'filename.txt') {
 ```
 
 ### Creating a directory
+
 ```perl
 mkdir 'new_directory';
 ```
 
 ### Deleting a file
+
 ```perl
 unlink 'file_to_delete.txt';
 ```
 
 ### String concatenation
+
 ```perl
 my $new_string = $string1 . $string2;
 ```
 
 ### String length
+
 ```perl
 my $length = length($string);
 ```
 
 ### Reading Environment Variables
+
 ```perl
 my $value = $ENV{'VAR_NAME'};
 ```
 
 ### Working with Dates
+
 ```perl
 use Date::Calc qw(Today Add_Delta_Days);
 my ($year, $month, $day) = Today();
@@ -157,16 +183,19 @@ my ($new_year, $new_month, $new_day) = Add_Delta_Days($year, $month, $day, 7);
 ```
 
 ### Executing external commands
+
 ```perl
 my $output = `ls -l`;
 ```
 
 ### Random Number Generation
+
 ```perl
 my $random_number = int(rand(100));
 ```
 
 ### Error Handling
+
 ```perl
 eval {
     # Code that might throw an exception
@@ -177,11 +206,13 @@ if ($@) {
 ```
 
 ### Using modules
+
 ```perl
 use Module::Name;
 ```
 
 ### Sending email (with NET::SMTP)
+
 ```perl
 use Net::SMTP;
 
@@ -196,6 +227,7 @@ $smtp->quit;
 ```
 
 ### Working with JSON (JSON module)
+
 ```perl
 use JSON;
 
@@ -204,6 +236,7 @@ my $data = decode_json($json_text);
 ```
 
 ### Multiline Strings
+
 ```perl
 my $multiline = <<"END_TEXT";
 This is a
@@ -212,6 +245,7 @@ END_TEXT
 ```
 
 ### Fetching URL Content (with LWP::Simple)
+
 ```perl
 use LWP::Simple;
 
@@ -219,6 +253,7 @@ my $content = get('https://example.com');
 ```
 
 ### URL Encoding/Dencoding
+
 ```perl
 use URI::Escape;
 
@@ -227,6 +262,7 @@ my $decoded = uri_unescape($encoded);
 ```
 
 ### Reading and writing CSV files (with Text::CSV)
+
 ```perl
 use Text::CSV;
 
@@ -239,6 +275,7 @@ close $file;
 ```
 
 ### HTTP Server (with HTTP::Server::Simple)
+
 ```perl
 use HTTP::Server::Simple;
 use base qw(HTTP::Server::Simple::CGI);
@@ -252,6 +289,7 @@ $server->run();
 ```
 
 ### Calculating Hash digesets (with Digest::MD5)
+
 ```perl
 use Digest::MD5;
 
@@ -261,6 +299,7 @@ my $hash = $digest->hexdigest;
 ```
 
 ### XML Parsing (with XML::LibXML)
+
 ```perl
 use XML::LibXML;
 
@@ -269,6 +308,7 @@ my $doc = $parser->parse_file('data.xml');
 ```
 
 ### Database Interaction (with DBI)
+
 ```perl
 use DBI;
 
@@ -283,6 +323,7 @@ $dbh->disconnect();
 ```
 
 ### Object Oriented Programming
+
 ```perl
 package MyClass;
 
@@ -303,6 +344,7 @@ print $obj->get_data();
 ```
 
 ### Exception Handling with Try::Tiny
+
 ```perl
 use Try::Tiny;
 
@@ -315,6 +357,7 @@ catch {
 ```
 
 ### Multithreading (with threads)
+
 ```perl
 use threads;
 
@@ -326,6 +369,7 @@ $_->join() foreach @threads;
 ```
 
 ### Using regular expression capture groups
+
 ```perl
 my $string = "Date: 2023-09-05";
 if ($string =~ /Date: (\d{4}-\d{2}-\d{2})/) {
@@ -335,6 +379,7 @@ if ($string =~ /Date: (\d{4}-\d{2}-\d{2})/) {
 ```
 
 ### File upload handler (with CGI)
+
 ```perl
 use CGI;
 
@@ -351,6 +396,7 @@ if ($file) {
 ```
 
 ### Using DBIx::Class for Database ORM
+
 ```perl
 use DBIx::Class;
 
@@ -361,6 +407,7 @@ print $row->column_name;
 ```
 
 ### Working with DateTime Objects
+
 ```perl
 use DateTime;
 
@@ -370,6 +417,7 @@ print $dt->strftime("%Y-%m-%d %H:%M:%S");
 ```
 
 ### Sending HTTP Requests (with LWP::UserAgent)
+
 ```perl
 use LWP::UserAgent;
 
@@ -381,6 +429,7 @@ if ($response->is_success) {
 ```
 
 ### Creating RESTful APIs (with Dancer2)
+
 ```perl
 use Dancer2;
 
@@ -393,6 +442,7 @@ start;
 ```
 
 ### Parsing Command Line Arguments (with Getopt::Long)
+
 ```perl
 use Getopt::Long;
 
@@ -408,6 +458,7 @@ print "Output file: $output_file\n";
 ```
 
 ### Template Processing (with Template::Toolkit)
+
 ```perl
 use Template;
 
@@ -417,6 +468,7 @@ $template->process('template.tt', $vars) || die $template->error();
 ```
 
 ### Asynchronous Programming (with Mojo::IOLoop)
+
 ```perl
 
 use Mojo::IOLoop;
@@ -435,6 +487,7 @@ Mojo::IOLoop->delay(
 ```
 
 ### Handling Binary Data (with Encode)
+
 ```perl
 use Encode;
 
@@ -443,6 +496,7 @@ my $decoded_data = decode_base64($encoded_data);
 ```
 
 ### Creating custom exception classes
+
 ```perl
 package MyException;
 use base 'Exception::Class';
@@ -461,6 +515,7 @@ catch {
 ```
 
 ### Database Transactions (with DBIx::Class)
+
 ```perl
 my $schema = DBIx::Class::Schema->connect('dbi:SQLite:dbname=database.db');
 my $txn = $schema->txn_scope;
@@ -469,6 +524,7 @@ $txn->commit; # or $txn->rollback;
 ```
 
 ### Using Moose for Object Oriented Programming
+
 ```perl
 package MyClass;
 use Moose;
@@ -485,6 +541,7 @@ $obj->print_data();
 ```
 
 ### Creating custom modules
+
 ```perl
 package MyModule;
 
@@ -509,6 +566,7 @@ $module->do_something();
 ```
 
 ### Parsing JSON with Error Handling (with JSON::MaybeXS)
+
 ```perl
 use JSON::MaybeXS;
 
@@ -523,6 +581,7 @@ if ($@) {
 ```
 
 ### Web Scraping (with Mojo::UserAgent)
+
 ```perl
 use Mojo::UserAgent;
 
@@ -532,6 +591,7 @@ my $title = $dom->at('title')->text;
 ```
 
 ### Creating a RESTful API (with Mojolicious)
+
 ```perl
 use Mojolicious::Lite;
 

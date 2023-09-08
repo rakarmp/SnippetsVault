@@ -1,38 +1,45 @@
-## Haskell
+# Haskell
 
 ### Hello World
+
 ```haskell
 main :: IO ()
 main = putStrLn "Hello, World!"
 ```
 
 ### Variables
+
 ```haskell
 let variable = "Value"
 ```
 
 ### Function definition
+
 ```haskell
 add :: Int -> Int -> Int
 add x y = x + y
 ```
 
 ### Function application
+
 ```haskell
 result = add 3 5
 ```
 
 ### Lists
+
 ```haskell
 let myList = [1, 2, 3]
 ```
 
 ### Tuples
+
 ```haskell
 let myTuple = (1, "Hello")
 ```
 
 ### Patter Matching
+
 ```haskell
 myFunction :: Int -> String
 myFunction 0 = "Zero"
@@ -40,6 +47,7 @@ myFunction _ = "Non-zero"
 ```
 
 ### Guards
+
 ```haskell
 isEven :: Int -> Bool
 isEven x
@@ -48,37 +56,44 @@ isEven x
 ```
 
 ### Higher Order Functions
+
 ```haskell
 applyTwice :: (a -> a) -> a -> a
 applyTwice f x = f (f x)
 ```
 
 ### Lambda Functions
+
 ```haskell
 addOne = \x -> x + 1
 ```
 
 ### List comprehension
+
 ```haskell
 evenNumbers = [x | x <- [1..10], x `mod` 2 == 0]
 ```
 
 ### Type aliases
+
 ```haskell
 type Name = String
 ```
 
 ### Algebraic data types
+
 ```haskell
 data Shape = Circle Float | Rectangle Float Float
 ```
 
 ### Record syntax
+
 ```haskell
 data Person = Person { name :: String, age :: Int }
 ```
 
 ### Recursive functions
+
 ```haskell
 factorial :: Integer -> Integer
 factorial 0 = 1
@@ -86,6 +101,7 @@ factorial n = n * factorial (n - 1)
 ```
 
 ### Monads and IO
+
 ```haskell
 main :: IO ()
 main = do
@@ -95,16 +111,19 @@ main = do
 ```
 
 ### Fmap (Functor)
+
 ```haskell
 fmap (+ 1) [1, 2, 3] -- Applies the function to each element
 ```
 
 ### Applicative style
+
 ```haskell
 (+) <$> [1, 2] <*> [3, 4] -- Applies functions to all combinations
 ```
 
 ### Monads (maybe)
+
 ```haskell
 safeDivide :: Double -> Double -> Maybe Double
 safeDivide _ 0 = Nothing
@@ -112,6 +131,7 @@ safeDivide x y = Just (x / y)
 ```
 
 ### Monads (either)
+
 ```haskell
 data MyError = DivideByZero | NegativeResult
 
@@ -124,6 +144,7 @@ safeDivide x y
 ```
 
 ### Monads (state)
+
 ```haskell
 import Control.Monad.State
 
@@ -140,6 +161,7 @@ runMyState action = evalState action 0
 ```
 
 ### Error handling with maybe
+
 ```haskell
 safeHead :: [a] -> Maybe a
 safeHead [] = Nothing
@@ -147,6 +169,7 @@ safeHead (x:_) = Just x
 ```
 
 ### Error handling with either
+
 ```haskell
 divide :: Double -> Double -> Either String Double
 divide _ 0 = Left "Division by zero"
@@ -154,6 +177,7 @@ divide x y = Right (x / y)
 ```
 
 ### Monadic error handling
+
 ```haskell
 divideMonad :: Double -> Double -> Either String Double
 divideMonad x y = do
@@ -164,6 +188,7 @@ divideMonad x y = do
 ```
 
 ### Monadic error handling with maybe
+
 ```haskell
 safeDivideMonad :: Double -> Double -> Maybe Double
 safeDivideMonad x y = do
@@ -172,6 +197,7 @@ safeDivideMonad x y = do
 ```
 
 ### Monadic error handling with Either
+
 ```haskell
 safeDivideMonad :: Double -> Double -> Either String Double
 safeDivideMonad x y = do
@@ -182,6 +208,7 @@ safeDivideMonad x y = do
 ```
 
 ### Custom Monadic error handling
+
 ```haskell
 data MyError = MyError String
 
@@ -204,6 +231,7 @@ result = safeDivideMonad 10 0 `catchError` (\e -> Left (MyError ("Handled: " ++ 
 ```
 
 ### Monadic Input/Output (with text.IO)
+
 ```haskell
 import System.IO
 
@@ -216,6 +244,7 @@ main = do
 ```
 
 ### Lazy evaluation
+
 ```haskell
 fib :: Integer -> Integer
 fib n = fibs !! fromIntegral n
@@ -223,6 +252,7 @@ fib n = fibs !! fromIntegral n
 ```
 
 ### Memoization
+
 ```haskell
 fib :: Integer -> Integer
 fib = (map fib' [0..] !!)
@@ -232,6 +262,7 @@ fib = (map fib' [0..] !!)
 ```
 
 ### Monadic parsing with Parsec
+
 ```haskell
 import Text.Parsec
 import Text.Parsec.String
@@ -247,6 +278,7 @@ parseResult = parse parser "" "123"
 ```
 
 ### Reading and writing files
+
 ```haskell
 import System.IO
 
@@ -258,6 +290,7 @@ main = do
 ```
 
 ### Working with Monads
+
 ```haskell
 import Control.Monad
 
@@ -266,6 +299,7 @@ printList xs = forM_ xs print
 ```
 
 ### Using Data.Map for key-value pairs
+
 ```haskell
 import qualified Data.Map as Map
 
@@ -273,6 +307,7 @@ myMap = Map.fromList [("key1", "value1"), ("key2", "value2")]
 ```
 
 ### Using data.set for sets
+
 ```haskell
 import qualified Data.Set as Set
 
@@ -280,6 +315,7 @@ mySet = Set.fromList [1, 2, 3, 3]
 ```
 
 ### Sorting lists
+
 ```haskell
 import Data.List
 
@@ -287,6 +323,7 @@ sortedList = sort [3, 1, 2]
 ```
 
 ### Zipping Lists
+
 ```haskell
 list1 = [1, 2, 3]
 list2 = ["one", "two", "three"]
@@ -294,6 +331,7 @@ zippedList = zip list1 list2
 ```
 
 ### Using data.text for text processing
+
 ```haskell
 import qualified Data.Text as T
 
@@ -303,6 +341,7 @@ combinedText = T.append text1 text2
 ```
 
 ### Working with data.byteString for binary data
+
 ```haskell
 import qualified Data.ByteString as BS
 
@@ -310,6 +349,7 @@ byteString = BS.pack [72, 101, 108, 108, 111]  -- "Hello"
 ```
 
 ### Concurrent programming (Control.Concurrent)
+
 ```haskell
 import Control.Concurrent
 
@@ -321,6 +361,7 @@ main = do
 ```
 
 ### Working with JSON (aeson library)
+
 ```haskell
 {-# LANGUAGE DeriveGeneric #-}
 
@@ -344,6 +385,7 @@ main = do
 ```
 
 ### Parsing XML (xml-conduit library)
+
 ```haskell
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -359,6 +401,7 @@ main = do
 ```
 
 ### Using ST monads for mutable data
+
 ```haskell
 import Control.Monad.ST
 import Data.STRef
@@ -373,6 +416,7 @@ main = do
 ```
 
 ### Using Data.Vetor for efficient sequences
+
 ```haskell
 import qualified Data.Vector as V
 
@@ -384,6 +428,7 @@ main = do
 ```
 
 ### Using STM for concurrent programmnig
+
 ```haskell
 import Control.Concurrent.STM
 
@@ -408,6 +453,7 @@ deposit account amount = atomically $ do
 ```
 
 ### Custom monads with mtl library
+
 ```haskell
 {-# LANGUAGE FlexibleContexts #-}
 
@@ -428,6 +474,7 @@ main = do
 ```
 
 ### Creating a RESTful API server (with Servant library)
+
 ```haskell
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE TypeOperators #-}
@@ -453,6 +500,7 @@ main = run 8080 app
 ```
 
 ### Using template haskell with TH library
+
 ```haskell
 {-# LANGUAGE TemplateHaskell #-}
 
@@ -471,6 +519,7 @@ main = putStrLn $(sayHello "Alice")
 ```
 
 ### Using Data.ByteString.Lazy for efficient binary data
+
 ```haskell
 import qualified Data.ByteString.Lazy as BSL
 
@@ -478,6 +527,7 @@ byteString = BSL.pack [72, 101, 108, 108, 111]  -- "Hello"
 ```
 
 ### Parsing CSV with cassava library
+
 ```haskell
 import qualified Data.Csv as Csv
 import Data.Vector (Vector)
@@ -499,6 +549,7 @@ main = do
 ```
 
 ### Working with type classes with typeclassopedia
+
 ```haskell
 class MyShow a where
     myShow :: a -> String
@@ -517,6 +568,7 @@ main = do
 ```
 
 ### Using data.text.lazy for text processing
+
 ```haskell
 import qualified Data.Text.Lazy as TL
 
@@ -526,6 +578,7 @@ combinedText = TL.append text1 text2
 ```
 
 ### Building a RESTful API client with http-client library
+
 ```haskell
 import Network.HTTP.Client
 import Network.HTTP.Client.TLS
@@ -539,6 +592,7 @@ main = do
 ```
 
 ### Using data.text.encoding for text encoding/decoding
+
 ```haskell
 import qualified Data.Text as T
 import qualified Data.Text.Encoding as TE
@@ -548,6 +602,7 @@ decodedText = T.unpack (TE.decodeUtf8 encodedText)
 ```
 
 ### Concurrency with softwaare transactional memory (STM)
+
 ```haskell
 import Control.Concurrent.STM
 
@@ -572,6 +627,7 @@ deposit account amount = atomically $ do
 ```
 
 ### Concurrency with parallelism
+
 ```haskell
 import Control.Parallel
 
@@ -584,6 +640,7 @@ main = do
 ```
 
 ### Building a GraphQL API server with graphql-api library
+
 ```haskell
 {-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE OverloadedStrings #-}
@@ -608,6 +665,7 @@ main = scotty 3000 $ do
 ```
 
 ### Using mtl for monad transformers
+
 ```haskell
 {-# LANGUAGE FlexibleContexts #-}
 
@@ -634,7 +692,3 @@ main = do
         Left (MyError err) -> putStrLn err
         Right msg -> putStrLn msg
 ```
-
-
-
-

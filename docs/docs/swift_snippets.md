@@ -1,39 +1,46 @@
-## Swift
+# Swift
 
 ### Hello World
+
 ```swift
 print("Hello, World!")
 ```
 
 ### Variabels and Constants
+
 ```swift
 let constantValue = 10
 var variableValue = 5
 ```
 
 ### Type inference
+
 ```swift
 let myString = "Hello, Swift!" // Inferred as String
 ```
 
 ### Type annotation
+
 ```swift
 let age: Int = 30
 ```
 
 ### Arrays
+
 ```swift
 var fruits = ["Apple", "Banana", "Orange"]
 fruits.append("Mango")
 ```
 
 ### Dictionaries
+
 ```swift
 var person = ["name": "John", "age": 25]
 person["city"] = "New York"
 ```
 
 ### Conditional statements
+
 ```swift
 if age >= 18 {
     print("You are an adult.")
@@ -43,6 +50,7 @@ if age >= 18 {
 ```
 
 ### For-in
+
 ```swift
 for number in 1...5 {
     print(number)
@@ -50,6 +58,7 @@ for number in 1...5 {
 ```
 
 ### While
+
 ```swift
 var count = 0
 while count < 5 {
@@ -59,6 +68,7 @@ while count < 5 {
 ```
 
 ### Functions
+
 ```swift
 func greet(name: String) -> String {
     return "Hello, \(name)!"
@@ -66,6 +76,7 @@ func greet(name: String) -> String {
 ```
 
 ### Optional binding
+
 ```swift
 var optionalValue: Int? = 42
 if let value = optionalValue {
@@ -76,6 +87,7 @@ if let value = optionalValue {
 ```
 
 ### Guard statement
+
 ```swift
 func checkAge(age: Int?) {
     guard let age = age else {
@@ -87,6 +99,7 @@ func checkAge(age: Int?) {
 ```
 
 ### Enumerations
+
 ```swift
 enum CompassDirection {
     case north, south, east, west
@@ -95,6 +108,7 @@ let direction = CompassDirection.north
 ```
 
 ### Structs
+
 ```swift
 struct Point {
     var x: Double
@@ -104,6 +118,7 @@ let origin = Point(x: 0.0, y: 0.0)
 ```
 
 ### Classes
+
 ```swift
 class Person {
     var name: String = ""
@@ -115,6 +130,7 @@ person.age = 30
 ```
 
 ### Inheritance
+
 ```swift
 class Student: Person {
     var studentID: String = ""
@@ -124,6 +140,7 @@ student.studentID = "12345"
 ```
 
 ### Protocols
+
 ```swift
 protocol Animal {
     func makeSound()
@@ -131,6 +148,7 @@ protocol Animal {
 ```
 
 ### Extensions
+
 ```swift
 extension String {
     func capitalize() -> String {
@@ -141,6 +159,7 @@ let capitalizedString = "hello".capitalize()
 ```
 
 ### Closures
+
 ```swift
 let addNumbers: (Int, Int) -> Int = { (a, b) in
     return a + b
@@ -149,6 +168,7 @@ let result = addNumbers(5, 3)
 ```
 
 ### Optionals
+
 ```swift
 var name: String? = "John"
 if let unwrappedName = name {
@@ -159,6 +179,7 @@ if let unwrappedName = name {
 ```
 
 ### Error Handling
+
 ```swift
 enum MyError: Error {
     case someError
@@ -176,6 +197,7 @@ do {
 ```
 
 ### Tuples
+
 ```swift
 let personInfo = (name: "Alice", age: 25)
 print(personInfo.name)
@@ -183,6 +205,7 @@ print(personInfo.age)
 ```
 
 ### Type casting
+
 ```swift
 class Animal {}
 class Dog: Animal {}
@@ -194,6 +217,7 @@ if myDog is Animal {
 ```
 
 ### Deinitialization
+
 ```swift
 class MyClass {
     deinit {
@@ -205,6 +229,7 @@ object = nil // Deinitialization message printed
 ```
 
 ### Acces control
+
 ```swift
 public class MyPublicClass {}
 internal class MyInternalClass {}
@@ -212,6 +237,7 @@ private class MyPrivateClass {}
 ```
 
 ### Property observers
+
 ```swift
 var temperature: Double = 0.0 {
     didSet {
@@ -222,6 +248,7 @@ temperature = 25.0 // Prints the observer message
 ```
 
 ### Computed properties
+
 ```swift
 struct Circle {
     var radius: Double
@@ -232,6 +259,7 @@ struct Circle {
 ```
 
 ### Lazy properties
+
 ```swift
 class ImageLoader {
     lazy var image: UIImage = {
@@ -242,6 +270,7 @@ class ImageLoader {
 ```
 
 ### Equatable and Comparable
+
 ```swift
 struct Person: Equatable, Comparable {
     var name: String
@@ -254,6 +283,7 @@ struct Person: Equatable, Comparable {
 ```
 
 ### Codable
+
 ```swift
 struct Product: Codable {
     var name: String
@@ -269,6 +299,7 @@ let product = try JSONDecoder().decode(Product.self, from: jsonData)
 ```
 
 ### Date formatting
+
 ```swift
 let dateFormatter = DateFormatter()
 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -276,11 +307,13 @@ let date = dateFormatter.date(from: "2023-09-04 15:30:00")
 ```
 
 ### NotificationCenter
+
 ```swift
 NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: Notification.Name("MyNotification"), object: nil)
 ```
 
 ### Dispatch queues
+
 ```swift
 let queue = DispatchQueue(label: "com.myapp.myqueue")
 queue.async {
@@ -289,12 +322,14 @@ queue.async {
 ```
 
 ### User Defaults
+
 ```swift
 UserDefaults.standard.set("John", forKey: "username")
 let username = UserDefaults.standard.string(forKey: "username")
 ```
 
 ### File Manager
+
 ```swift
 let fileManager = FileManager.default
 if let documentsDir = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -303,6 +338,7 @@ if let documentsDir = fileManager.urls(for: .documentDirectory, in: .userDomainM
 ```
 
 ### Core Data
+
 ```swift
 import CoreData
 
@@ -321,6 +357,7 @@ do {
 ```
 
 ### UIAlertController
+
 ```swift
 let alertController = UIAlertController(title: "Alert", message: "This is an alert message.", preferredStyle: .alert)
 let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -329,17 +366,20 @@ present(alertController, animated: true, completion: nil)
 ```
 
 ### Segues (Storyboard)
+
 ```swift
 performSegue(withIdentifier: "showDetail", sender: self)
 ```
 
 ### Gesture Recognizers
+
 ```swift
 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
 view.addGestureRecognizer(tapGesture)
 ```
 
 ### Core Location (Location Services)
+
 ```swift
 import CoreLocation
 
@@ -349,6 +389,7 @@ locationManager.startUpdatingLocation()
 ```
 
 ### Generics
+
 ```swift
 func swap<T>(_ a: inout T, _ b: inout T) {
     let temp = a
@@ -358,22 +399,26 @@ func swap<T>(_ a: inout T, _ b: inout T) {
 ```
 
 ### Higher-order functions-map
+
 ```swift
 let numbers = [1, 2, 3, 4, 5]
 let squaredNumbers = numbers.map { $0 * $0 }
 ```
 
 ### Higher-order functions-filter
+
 ```swift
 let evenNumbers = numbers.filter { $0 % 2 == 0 }
 ```
 
 ### Higher-order functions-reduce
+
 ```swift
 let sum = numbers.reduce(0, +)
 ```
 
 ### Async/Await (iOS 15+)
+
 ```swift
 async {
     let data = await fetchData()
@@ -382,6 +427,7 @@ async {
 ```
 
 ### Result Type (Error Handling)
+
 ```swift
 func divide(_ a: Int, by b: Int) -> Result<Int, MyError> {
     if b == 0 {
@@ -392,6 +438,7 @@ func divide(_ a: Int, by b: Int) -> Result<Int, MyError> {
 ```
 
 ### Custom operators
+
 ```swift
 infix operator **: MultiplicationPrecedence
 
@@ -401,6 +448,7 @@ func **(base: Double, exponent: Double) -> Double {
 ```
 
 ### Key-Value Observing (KVO)
+
 ```swift
 class MyClass: NSObject {
     @objc dynamic var value: Int = 0
@@ -410,6 +458,7 @@ myObject.addObserver(self, forKeyPath: "value", options: .new, context: nil)
 ```
 
 ### Codable with Custom Keys
+
 ```swift
 struct Person: Codable {
     enum CodingKeys: String, CodingKey {
@@ -422,6 +471,7 @@ struct Person: Codable {
 ```
 
 ### Core animation
+
 ```swift
 let animation = CABasicAnimation(keyPath: "position")
 animation.fromValue = CGPoint(x: 0, y: 0)
@@ -431,6 +481,7 @@ layer.add(animation, forKey: "positionAnimation")
 ```
 
 ### Concurrency with DispatchGroup
+
 ```swift
 let group = DispatchGroup()
 
@@ -452,6 +503,7 @@ group.notify(queue: .main) {
 ```
 
 ### Core graphics drawing
+
 ```swift
 class CustomView: UIView {
     override func draw(_ rect: CGRect) {
@@ -463,6 +515,7 @@ class CustomView: UIView {
 ```
 
 ### Autolayout Programmatically
+
 ```swift
 let redView = UIView()
 redView.backgroundColor = .red
@@ -476,6 +529,7 @@ redView.heightAnchor.constraint(equalToConstant: 100).isActive = true
 ```
 
 ### Core Data Relationships
+
 ```swift
 class Author: NSManagedObject {
     @NSManaged var name: String
@@ -489,6 +543,7 @@ class Book: NSManagedObject {
 ```
 
 ### Dependency Injection
+
 ```swift
 class DataManager {
     func fetchData() -> [String] {
@@ -499,7 +554,7 @@ class DataManager {
 
 class MyViewController {
     let dataManager: DataManager
-    
+
     init(dataManager: DataManager) {
         self.dataManager = dataManager
     }
@@ -507,6 +562,7 @@ class MyViewController {
 ```
 
 ### Swift Package Manager
+
 ```swift
 // Create a Swift package
 swift package init --type library
@@ -521,6 +577,7 @@ targets: [
 ```
 
 ### Keychain Access
+
 ```swift
 import KeychainAccess
 
@@ -530,6 +587,7 @@ let storedUsername = keychain["username"]
 ```
 
 ### Unit Testing with XCTest
+
 ```swift
 import XCTest
 
@@ -542,6 +600,7 @@ class MyTests: XCTestCase {
 ```
 
 ### Custom Property Wrappers
+
 ```swift
 @propertyWrapper
 struct Trimmed {
@@ -559,6 +618,7 @@ struct MyStruct {
 ```
 
 ### SwiftUI
+
 ```swift
 import SwiftUI
 
